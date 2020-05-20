@@ -1,4 +1,3 @@
-const PORT = 3001 || parseInt(process.env.PORT, 10);
 const dotenv = require("dotenv");
 
 // Set the NODE_ENV to 'development' by default
@@ -10,6 +9,8 @@ if (!envFound) {
 
   throw new Error("⚠️  Couldn't find .env file  ⚠️");
 }
+
+const PORT = 3001 || parseInt(process.env.PORT, 10);
 module.exports = {
   PORT: PORT,
   MONGO_CONNECTION_STRING:
